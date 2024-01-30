@@ -1,3 +1,6 @@
+// Name - Rajveer Mashruwala
+// Student ID - 100911307
+// Assignment - Lab 2
 import java.util.Scanner;
 
 import javax.lang.model.type.NullType;
@@ -12,7 +15,7 @@ public class Student1 {
         this.lastName = lastName;
         this.age = 0;
     }
-
+    
     public String getfirstName() {
         return firstName;
     }
@@ -26,9 +29,6 @@ public class Student1 {
     }
 
     public void setlastName(String lastName){
-        if (lastName == null || lastName.isEmpty()) {
-            System.out.println("Last name required");
-        }
         this.lastName = lastName;
     }
 
@@ -46,16 +46,15 @@ public class Student1 {
        String firstName = scanner.nextLine(); 
        System.out.println("Enter your last name:");
        String lastName = scanner.nextLine();
-       
+       if (lastName == null || lastName.isEmpty()) {
+            throw new IllegalArgumentException ("Last name is required");
+       }
        System.out.println("Enter your age:");
        int age = scanner.nextInt();
 
        if (age < 0 || age > 100) {
            System.out.println("Please enter a valid age between 0 to 100");
         } 
-        /*else if (lastName == "NULL") {
-            System.out.println("Please enter your lastname");
-        }*/
         else {
             System.out.println("My name is" + " " + firstName + " " + lastName + " " + "and my age is" + " " + age);
         }
