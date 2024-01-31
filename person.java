@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-
+// creating class for private name, age and gender
 public class person {
     private String name;
     private int age;
     private char gender;
-// constructer
+//  creating a constructer for getting a value and setting the value
     public person(String name, int age, char gender){
         this.name = name;
         this.age = age;
@@ -29,6 +29,7 @@ public class person {
     public void setGender (char gender){
         this.gender = gender;
     }
+    // creating a method to introduce the person
     public void introduce(){
         System.out.println("Name:"+ name);
         System.out.println("age:"+ age);
