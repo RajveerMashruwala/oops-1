@@ -10,12 +10,9 @@ public class burgershop {
         System.out.println("Enter the number of burgers:");
         int burgers = scanner.nextInt();
         
-        double totalprice = burgers*BURGERPRICE;
-        float totalPrice = scanner.nextFloat();
-        double totaltax = totalprice*0.07;
-        float totalTax = scanner.nextFloat();
-        double totalAmount = totalprice + totaltax;
-        
+        double totalPrice = burgers*BURGERPRICE;
+        double totalTax = totalPrice*0.07;
+        double totalAmount = totalPrice + totalTax;  
 
         System.out.println("Customer Name:" + name);
         System.out.println("Quantity of the burger:" + burgers);
